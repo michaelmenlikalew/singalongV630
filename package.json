@@ -1,0 +1,29 @@
+{
+
+    "name": "MusicSF",
+
+    "version": "1.0.0",
+
+    "keywords": ["util", "functional", "server", "client", "browser"],
+
+    "author": "Justin",
+
+    "contributors": [],
+
+    "dependencies": {
+
+        "express" : "latest",
+
+        "ejs": "latest",
+
+        "path": "latest"
+
+    },
+
+    "scripts": {
+
+        "start": "node main.js"
+
+    }
+
+}

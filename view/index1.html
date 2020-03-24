@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Journey - lights</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,
+		initial-scale=1.0">
+		<style>
+			html, body {background-image: url("SFcabelcar.jpg");
+				background-position: center; background-size: cover;
+						background-repeat: no-repeat; width: 100%; height: 
+						100%; display: flex; flex-direction: column
+						;
+						justify-content: center; align-items: center}
+					
+		</style>
+</head>
+<h1 style ="background-color: rgb(205,200,100);"> City of San Francisco </h1>
+	<body>
+	 	
+ 	 <video controls id ="videoPlayer" width = "620" height = "540" controls>
+ 	 	<source src="JourneyLights.mp4" type="video/mp4" />
+ 	 	<source src="movie.ogg" type="video/ogg">
+ 	 </video>
+
+ 	 <script>
+ 	 	var date = new Date();
+ 	 		var setTime = 0 + (0/60); //Here we can set any time we want
+ 	 		var startAt = setTime * 60 * 60 * 1000
+ 	 		var stopAfter = 4 * 60 * 1000; // Here we can stop playing after certain time 
+ 	 		var Adjustment = (7 * 60 * 60 * 1000); //time Zone adjustment cos minus 7
+ 	 		var TwentyFourHours = 24 * 60 * 60 * 1000;
+
+ 	 		setInterval(function(){
+ 	 			date = new Date();
+ 	 			var mod = (date.getTime() - Adjustment) % TwentyFourHours;
+ 	 			if(mod > startAt && mod < startAt + stopAfter){
+ 	 				document.getElementById("videoPlayer").play();
+ 	 			}
+ 	 			else{
+ 	 				document.getElementById("videoPlayer").pause();
+ 	 			}
+ 	 		},1000);
+    
+    </script>
+	</body>
+</html>
+
+
+
+
+
+
